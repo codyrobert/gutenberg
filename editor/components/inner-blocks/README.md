@@ -109,11 +109,13 @@ If the block is a top level block: the locking of the Custom Post Type is used.
 
 To achieve distinct arrangements of nested blocks, you may assign layout as an object. When assigned, the rendered output will assign a layout-specific class which can be used in your block stylesheet to effect the visual arrangement of nested blocks.
 
-A layout is an object where each key is the slug of the layout (used also in the applied class to the block), and its value an object consisting of:
+A layout is an object where each key is the `slug` of the layout and its value an object consisting of:
 
 - Icon (`icon: string`): The slug of the Dashicon to use in controls presented to the user in moving between layouts
    - Reference: https://developer.wordpress.org/resource/dashicons/
 - Label (`label: string`): The text to display in the controls presented to the user in moving between layouts
+
+The `slug` is also used to create the class name for the block. A slug of `normal` would output the class `"layout-normal"`.
 
 **Example:**
 
